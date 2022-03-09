@@ -6,7 +6,7 @@ const Edit=({task})=> {
     
     const dispatch=useDispatch()
   const [show, setShow] = useState(false);
-  const [newText,setNewText]= useState(task.texte)
+  const [newText,setNewText]= useState(task.text)
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -26,7 +26,7 @@ const handleEdit=()=>{dispatch(editTask(task.id,newText));
         <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail" >
     <Form.Label>EDIT</Form.Label>
-    <Form.Control type="texte" placeholder="Inter Your Task" onChange={(e)=>setNewText(e.target.value)} name="texte"  value={newText} />
+    <Form.Control type="text" placeholder="Inter Your Task" onChange={(e)=>setNewText(e.target.value)} name="text"  value={newText} />
     <Form.Text className="text-muted">
       We'll never share your email with anyone else.
     </Form.Text>
