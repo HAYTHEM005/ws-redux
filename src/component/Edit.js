@@ -15,7 +15,7 @@ const handleEdit=()=>{dispatch(editTask(task.id,newText));
 }
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
+      <Button style={{margin:"20px"}} variant="primary" onClick={handleShow}>
         EDIT
       </Button>
 
